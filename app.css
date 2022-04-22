@@ -14,6 +14,18 @@ body .container {
   max-height: 800px;
 }
 
+body .container .toast {
+  width: 30%;
+  background-color: #D0F0F7;
+  color: green;
+  font-size: 1.2em;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  text-align: center;
+  margin: 0 auto;
+  visibility: hidden;
+}
+
 body .container form {
   width: 80%;
   display: -webkit-box;
@@ -53,26 +65,41 @@ body .container form .formBtn {
 
 body .container .result {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 10px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 body .container .result .items {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #14BFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+body .container .result .items p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+body .container .result .items p span {
+  color: #fff;
+  font-weight: normal;
 }
 /*# sourceMappingURL=app.css.map */

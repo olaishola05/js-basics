@@ -23,6 +23,16 @@ const age = document.getElementById('age')
 const form = document.querySelector('form')
 const storage = new Storage()
 
+const toastMsg = () => {
+    const toast = document.querySelector('.toast')
+    toast.style.visibility = 'visible'
+    toast.style.marginBottom = '10px'
+    setTimeout(() => {
+        toast.style.visibility = 'hidden'
+        toast.style.marginBottom = '0'
+    }, 3000);
+}
+
 
 const submitForm = (e)=> {
     e.preventDefault()
@@ -31,6 +41,7 @@ const submitForm = (e)=> {
         age: age.value
     }
     storage.setStorage(personInfo)
+    toastMsg()
     form.reset()
 }
 
