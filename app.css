@@ -16,14 +16,26 @@ body .container {
 
 body .container .toast {
   width: 30%;
-  background-color: #D0F0F7;
-  color: green;
+  visibility: hidden;
   font-size: 1.2em;
   padding: 0.5em;
   border-radius: 0.3em;
   text-align: center;
   margin: 0 auto;
-  visibility: hidden;
+}
+
+body .container .toast-success {
+  background-color: #D0F0F7;
+  color: green;
+  visibility: visible;
+  margin-bottom: 10px;
+}
+
+body .container .toast-error {
+  background-color: #FFCDD2;
+  color: red;
+  visibility: visible;
+  margin-bottom: 10px;
 }
 
 body .container form {
