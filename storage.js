@@ -1,5 +1,3 @@
-// localStorage.setItem('data', [])
-
 class Storage {
 
     constructor(){
@@ -38,5 +36,21 @@ const submitForm = (e)=> {
 
 
 formBtn.addEventListener('click', submitForm)
+
+
+const view = document.querySelector('.result')
+
+const displayContent = (data) => {
+    content = '';
+    data.forEach((person) =>{
+        content += `<div class="items">
+        <p>Name: <span id="nameResult">${person.name}</span></p>
+        <p>Age: <span id="ageResult">${person.age}</span></p>
+    </div>`
+    })
+
+    view.innerHTML = content
+}
+
 const data = storage.getItemFromStorage();
-console.log(data)
+displayContent(data)
