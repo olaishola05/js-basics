@@ -12,7 +12,7 @@ class Storage {
         localStorage.setItem('data', JSON.stringify(this.data))
     }
 
-    getItemFomStorage(){
+    getItemFromStorage(){
         const item = JSON.parse(localStorage.getItem('data'))
         return item
     }
@@ -38,5 +38,5 @@ const submitForm = (e)=> {
 
 
 formBtn.addEventListener('click', submitForm)
-const data = storage.getItemFomStorage();
+const data = storage.getItemFromStorage();
 console.log(data)
